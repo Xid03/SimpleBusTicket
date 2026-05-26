@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpure SDN.BHD.</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        * {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        body {
+            background-color: #eee;
+            background-position-x: 0;
+            background-position-Y: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #A652FA;
+            padding: 1rem 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: var(--box-shadow);
+        }
+
+        .logoSaya {
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            margin-right: 10px;
+
+        }
+
+        .logoSaya:hover {
+            transform: translateY(-10px);
+        }
+
+        header .logo {
+            color: var(--black);
+            font-size: 1.5rem;
+            font-weight: bolder;
+            margin-right: 400px;
+        }
+
+        header .logo i {
+            color: var(--brown);
+        }
+
+        header .navbar a {
+            font-size: 1.2rem;
+            border-radius: .5rem;
+            padding: .5rem 1.5rem;
+            color: var(--black);
+        }
+
+        header .navbar a.active,
+        header .navbar a:hover {
+            color: #fff;
+            background: var(--brown);
+        }
+
+        header .icons i,
+        header .icons a {
+            cursor: pointer;
+            margin-left: .5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            width: 4.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--black);
+            border-radius: 80%;
+            background: #eee;
+        }
+
+        header .icons i:hover,
+        header .icons a:hover {
+            color: #fff;
+            background: var(--brown);
+            transform: rotate(360deg);
+        }
+
+        #menu-bars {
+            background-color: #A652FA;
+            color: var(--black);
+            padding: 8px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 12%;
+            cursor: pointer;
+            margin-left: 40px;
+
+        }
+
+        #menu-bars:hover {
+            color: white;
+        }
+
+        .icone {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content2 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .dropdown-content2 a:hover {
+            background-color: #ddd;
+        }
+
+        .icone:hover .dropdown-content2 {
+            display: block;
+        }
+
+        .icone:hover #menu-bars {
+            background-color: var(--brown);
+        }
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url(images/busWallpaper.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home .homeContent img {
+            border-radius: 38%;
+            margin-left: 300px;
+        }
+
+        .glow {
+            font-size: 80px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+    </style>
+
+<body>
+    <header>
+        <img src="images/logoInterpure.png" alt="Interpure" class="logoSaya">
+        <a href="#" class="logo"><i class="fas-fa-utensils"></i>INTERPURE</a>
+
+        <nav class="navbar">
+            <a class="active" href="#home">Home</a>
+
+            <a href="aboutUs.html">About</a>
+            <a href="contactUs.html">Contact Us</a>
+        </nav>
+        <div class="icone">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <div class="dropdown-content2">
+                <a href="customerLogin.php">Customer Login</a>
+                <a href="AdminLogin.html">Admin Login</a>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="home" id="home">
+        <div class="homeContent">
+            <img src="images/circleLogoInterpure.png">
+        </div>
+
+        <h1 class="glow">WELCOME TO INTERPURE</h1>
+
+
+    </section>
+</body>
+</head>
+
+</html>
+
+</html>

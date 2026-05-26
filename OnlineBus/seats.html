@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpure SDN.BHD.</title>
+
+    <!--swiper js-->
+    <!--outsourcing-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        :root {
+            font-family: sans-serif;
+        }
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        body {
+            background-color: #eee;
+            background-position-x: 0;
+            background-position-Y: 0;
+            background-attachment: fixed;
+            padding-top: 50px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #A652FA;
+            padding: 1rem 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: var(--box-shadow);
+        }
+
+        .logoSaya {
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            margin-right: 10px;
+
+        }
+
+        .logoSaya:hover {
+            transform: translateY(-10px);
+        }
+        #menu-bars {
+            background-color: #A652FA;
+            color: var(--black);
+            padding: 8px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 12%;
+            cursor: pointer;
+            margin-left: 40px;
+
+        }
+
+        #menu-bars:hover {
+            color: white;
+        }
+
+        .icone {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content2 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .dropdown-content2 a:hover {
+            background-color: #ddd;
+        }
+
+        .icone:hover .dropdown-content2 {
+            display: block;
+        }
+
+        .icone:hover #menu-bars {
+            background-color: var(--brown);
+        }
+
+        header .logo {
+            color: var(--black);
+            font-size: 1.5rem;
+            font-weight: bolder;
+            margin-right: 400px;
+        }
+
+        header .logo i {
+            color: var(--brown);
+        }
+
+        header .navbar a {
+            font-size: 1.2rem;
+            border-radius: .5rem;
+            padding: .5rem 1.5rem;
+            color: var(--black);
+        }
+
+        header .navbar a.active,
+        header .navbar a:hover {
+            color: #fff;
+            background: var(--brown);
+        }
+
+        header .icons i,
+        header .icons a {
+            cursor: pointer;
+            margin-left: .5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            width: 4.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--black);
+            border-radius: 80%;
+            background: #eee;
+        }
+
+        header .icons i:hover,
+        header .icons a:hover {
+            color: #fff;
+            background: var(--brown);
+            transform: rotate(360deg);
+        }
+
+        .home {
+            min-height: 110vh;
+            display: flex;
+            align-items: center;
+            background-color: #FAF8E9;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #div1 {
+            background-color: #FFDFDF;
+            height: 20px;
+        }
+
+        #div2 {
+            height: 100px;
+            background-color: #FFDFDF
+        }
+
+        .ticket {
+            margin-top: -300px;
+        }
+
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        ::selection {
+            background-color: #eee;
+        }
+
+        ::-moz-selection {
+            background-color: #eee;
+        }
+
+        .theatre {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 350px;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 20px 10px;
+            box-shadow: 0px 0px 17px -4px #000;
+            margin-top: 400px;
+            margin-left: 200px;
+            margin-bottom: 70px;
+        }
+
+        .screen-side {
+            text-align: center;
+        }
+
+        .screen-side .screen {
+            height: 25px;
+            margin: 0 20px;
+            border-radius: 50%;
+            box-shadow: 0px -3px 0px 1px #ccc;
+            color: #ccc;
+        }
+
+        .screen-side .select-text {
+            color: #969696;
+        }
+
+        .exit {
+            position: relative;
+            height: 50px;
+        }
+
+        .exit:after {
+            content: "DRIVER";
+            font-size: 14px;
+            line-height: 18px;
+            padding: 0px 5px;
+            font-family: "Arial Narrow", Arial, sans-serif;
+            display: block;
+            position: absolute;
+            background: #81c784;
+            color: white;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .exit:after {
+            right: 0;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .seats {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+
+        .seat {
+            display: flex;
+            flex: 0 0 14.28571%;
+            padding: 5px;
+            position: relative;
+        }
+
+        .seat:nth-child(3) {
+            margin-right: 14.28571%;
+        }
+
+        .seat input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .seat input[type="checkbox"]:checked+label {
+            background: #bada55;
+            -webkit-animation-name: rubberBand;
+            animation-name: rubberBand;
+            animation-duration: 300ms;
+            animation-fill-mode: both;
+        }
+
+        .seat input[type="checkbox"]:disabled+label {
+            background: #ddd;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .seat input[type="checkbox"]:disabled+label:after {
+            content: "X";
+            text-indent: 0;
+            position: absolute;
+            top: 4px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .seat input[type="checkbox"]:disabled+label:hover {
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+
+        .seat label {
+            display: block;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.5rem;
+            padding: 4px 0;
+            color: #fff;
+            background: #26a69a;
+            border-radius: 2px;
+            animation-duration: 300ms;
+            animation-fill-mode: both;
+            transition-duration: 300ms;
+        }
+
+        .seat label:hover {
+            cursor: pointer;
+            box-shadow: 0px 0 7px 3px #ccc;
+        }
+
+        @-webkit-keyframes rubberBand {
+            0% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+
+            30% {
+                -webkit-transform: scale3d(1.25, 0.75, 1);
+                transform: scale3d(1.25, 0.75, 1);
+            }
+
+            40% {
+                -webkit-transform: scale3d(0.75, 1.25, 1);
+                transform: scale3d(0.75, 1.25, 1);
+            }
+
+            50% {
+                -webkit-transform: scale3d(1.15, 0.85, 1);
+                transform: scale3d(1.15, 0.85, 1);
+            }
+
+            65% {
+                -webkit-transform: scale3d(0.95, 1.05, 1);
+                transform: scale3d(0.95, 1.05, 1);
+            }
+
+            75% {
+                -webkit-transform: scale3d(1.05, 0.95, 1);
+                transform: scale3d(1.05, 0.95, 1);
+            }
+
+            100% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+        @keyframes rubberBand {
+            0% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+
+            30% {
+                -webkit-transform: scale3d(1.25, 0.75, 1);
+                transform: scale3d(1.25, 0.75, 1);
+            }
+
+            40% {
+                -webkit-transform: scale3d(0.75, 1.25, 1);
+                transform: scale3d(0.75, 1.25, 1);
+            }
+
+            50% {
+                -webkit-transform: scale3d(1.15, 0.85, 1);
+                transform: scale3d(1.15, 0.85, 1);
+            }
+
+            65% {
+                -webkit-transform: scale3d(0.95, 1.05, 1);
+                transform: scale3d(0.95, 1.05, 1);
+            }
+
+            75% {
+                -webkit-transform: scale3d(1.05, 0.95, 1);
+                transform: scale3d(1.05, 0.95, 1);
+            }
+
+            100% {
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+        .rubberBand {
+            -webkit-animation-name: rubberBand;
+            animation-name: rubberBand;
+        }
+
+        .info {
+            margin-top: -670px;
+        }
+
+        .Passenger {
+            width: 30px;
+            height: 30px;
+            background-color: #26a69a;
+            margin-top: 10px;
+            margin-left: 400px;
+        }
+
+        .change {
+            width: 150px;
+            height: 40px;
+            background-color: #FE6969;
+            border-radius: 3%;
+            margin-left: 790px;
+            font-family: 'Nunito', sans-serif;
+            transition: transform 0.5s;
+            cursor: pointer;
+        }
+
+        .change:hover {
+            background-color: rgb(223, 181, 181);
+            transform: translateY(-10px);
+        }
+
+        .Next {
+            width: 80px;
+            height: 40px;
+            background-color: #FE6969;
+            border-radius: 3%;
+            margin-left: 790px;
+            font-family: 'Nunito', sans-serif;
+            transition: transform 0.5s;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .Next:hover {
+            background-color: rgb(223, 181, 181);
+            transform: translateY(-10px);
+        }
+
+
+        /*footer*/
+        .footer-distributed {
+            background: #252323;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 55px 50px;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Footer left */
+
+        .footer-distributed .footer-left {
+            width: 40%;
+        }
+
+        /* The company logo */
+
+        .footer-distributed h3 {
+            color: #ffffff;
+            font: normal 36px 'Open Sans', cursive;
+            margin: 0;
+        }
+
+        .footer-distributed h3 span {
+            color: lightseagreen;
+        }
+
+        /* Footer links */
+
+        .footer-distributed .footer-links {
+            color: #ffffff;
+            margin: 20px 0 12px;
+            padding: 0;
+        }
+
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            font-weight: 400;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .footer-distributed .footer-company-name {
+            color: #e7dede;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* Footer Center */
+
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+
+        .footer-distributed .footer-center i {
+            background-color: #14171a;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer-distributed .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            font-weight: 400;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-center p span {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-distributed .footer-center p a {
+            color: lightseagreen;
+            text-decoration: none;
+            ;
+        }
+
+        .footer-distributed .footer-links a:before {
+            content: "|";
+            font-weight: 300;
+            font-size: 20px;
+            left: 0;
+            color: #fff;
+            display: inline-block;
+            padding-right: 5px;
+        }
+
+        .footer-distributed .footer-links .link-1:before {
+            content: none;
+        }
+
+        /* Footer Right */
+
+        .footer-distributed .footer-right {
+            width: 20%;
+        }
+
+        .footer-distributed .footer-company-about {
+            line-height: 20px;
+            color: #3688cf;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-distributed .footer-icons {
+            margin-top: 25px;
+        }
+
+        .footer-distributed .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+
+        @media (max-width: 880px) {
+
+            .footer-distributed {
+                font: bold 14px sans-serif;
+            }
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+
+        }
+    </style>
+
+<body>
+    <header>
+        <img src="images/logoInterpure.png" alt="Interpure" class="logoSaya">
+        <a href="#" class="logo"><i class="fas-fa-utensils"></i>INTERPURE</a>
+
+        <nav class="navbar">
+            <a class="active" href="#home">Home</a>
+
+            <a href="aboutUs.html">About</a>
+            <a href="contactUs.html">Contact Us</a>
+        </nav>
+        <div class="icone">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <div class="dropdown-content2">
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="div1"></div>
+    <div id="div2">
+        <div></div>
+        <br>
+        <br>
+        <h2> &nbsp ⚫Trip & Seat</h2>
+    </div>
+
+    <section class="home" id="home">
+        <div class="info">
+            <label name="Depart" id="Depart">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Depart By:</label>
+            <br><br>
+            <label name="location" id="location">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIpoh To Melaka</label>
+            <br><br>
+        </div>
+
+        <div class="homeContent">
+            <div class="ticket">
+                <!--Seats-->
+
+
+                <form name="pilihseat" id="pilihseat">
+                    <div class="theatre">
+                        <div class="screen-side">
+                            <h3 class="select-text">Please select a seat</h3>
+                        </div>
+                        <div class="exit exit--front">
+                        </div>
+                        <ol class="cabin">
+                            <li class="row row--1">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="1B" />
+                                        <label for="1B">1</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="1C" />
+                                        <label for="1C">2</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="1E" />
+                                        <label for="1E">3</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="1F" />
+                                        <label for="1F">4</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--2">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="2B" />
+                                        <label for="2B">5</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="2C" />
+                                        <label for="2C">6</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="2E" />
+                                        <label for="2E">7</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="2F" />
+                                        <label for="2F">8</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--3">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="3B" />
+                                        <label for="3B">9</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="3C" />
+                                        <label for="3C">10</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="3E" />
+                                        <label for="3E">11</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="3F" />
+                                        <label for="3F">12</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--4">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="4B" />
+                                        <label for="4B">13</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="4C" />
+                                        <label for="4C">14</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="4E" />
+                                        <label for="4E">15</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="4F" />
+                                        <label for="4F">16</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--5">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="5B" />
+                                        <label for="5B">17</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="5C" />
+                                        <label for="5C">18</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="5E" />
+                                        <label for="5E">19</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="5F" />
+                                        <label for="5F">20</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--6">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="6B" />
+                                        <label for="6B">21</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="6C" />
+                                        <label for="6C">22</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="6E" />
+                                        <label for="6E">23</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="6F" />
+                                        <label for="6F">24</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--7">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="7B" />
+                                        <label for="7B">25</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="7C" />
+                                        <label for="7C">26</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="7E" />
+                                        <label for="7E">27</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="7F" />
+                                        <label for="7F">28</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--8">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="8B" />
+                                        <label for="8B">29</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="8C" />
+                                        <label for="8C">30</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="8E" />
+                                        <label for="8E">31</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="8F" />
+                                        <label for="8F">32</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--9">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="9B" />
+                                        <label for="9B">33</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="9C" />
+                                        <label for="9C">34</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="9E" />
+                                        <label for="9E">35</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="9F" />
+                                        <label for="9F">36</label>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="row row--10">
+                                <ol class="seats" type="A">
+                                    <li class="seat">
+                                        <input type="checkbox" id="10B" />
+                                        <label for="10B">37</label>
+                                    </li>
+                                    <li class="seat">
+                                        <input type="checkbox" id="10C" />
+                                        <label for="10C">38</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: 130px;">
+                                        <input type="checkbox" id="10E" />
+                                        <label for="10E">39</label>
+                                    </li>
+                                    <li class="seat" style="margin-left: -47px;">
+                                        <input type="checkbox" id="10F" />
+                                        <label for="10F">40</label>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                </form>
+                <div class="exit">
+                    <div class="Passenger">
+                        <p style="margin-left:35px;">Passenger</p>
+                    </div>
+                </div>
+     
+            <a href="homepage.html">
+                <button class="change">
+                    Change Destination
+                </button>
+            </a>
+
+                <a href="Payment.html">
+                    <button class="Next">
+                        Next
+                    </button>
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <br>
+    <!--footer section-->
+    <!--footer section start here-->
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <img src="images/logoInterpure.png" class="logo">
+
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+
+                <a href="#">About us</a>
+
+                <a href="#">Online Support</a>
+
+            </p>
+
+            <p class="footer-company-name">Copyright Interpure Sdn.Bhd © 2023</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Ipoh</span> Perak, Malaysia</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+6098513953</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">interpurecompany@gmail.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Our Mission Is To Provide Our Customers With A Convenient And Affordable Way To Book Bus Tickets Online.
+                We Believe That Everyone Should Have Access To Safe And Reliable Transportation, And We Are Committed To
+                Making That Happen.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src=script.js></script>
+
+</body>
+</head>
+
+</html>
+
+</html>

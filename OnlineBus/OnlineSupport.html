@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Bakery</title>
+
+    <!--link font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--custom css file link-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+        @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+        :root {
+            --brown: #c48033;
+            --black: #192a56;
+            --light-color: #666;
+            --box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, .1);
+            font-family: 'Nunito', sans-serif;
+        }
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        html,
+        body {
+            background: #333 url("https://codepen.io/images/classy_fabric.png");
+
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+            background-position-x: 0;
+            background-position-Y: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #A652FA;
+            padding: 1rem 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: var(--box-shadow);
+        }
+
+        .logoSaya {
+            width: 75px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            margin-right: 10px;
+
+        }
+
+        .logoSaya:hover {
+            transform: translateY(-10px);
+        }
+
+        header .logo {
+            color: var(--black);
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+
+        header .logo i {
+            color: var(--brown);
+
+        }
+
+        header .navbar a {
+            font-size: 1.2rem;
+            border-radius: .5rem;
+            padding: .5rem 1.5rem;
+            color: var(--black);
+        }
+
+        header .navbar a.active,
+        header .navbar a:hover {
+            color: #fff;
+            background: plum;
+        }
+
+        header .icons i,
+        header .icons a {
+            cursor: pointer;
+            margin-left: .5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            width: 4.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--black);
+            border-radius: 80%;
+            background: #eee;
+        }
+
+        header .icons i:hover,
+        header .icons a:hover {
+            color: #fff;
+            background: var(--brown);
+            transform: rotate(360deg);
+        }
+        .contact{
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url(images/onlineSupport.jpg);
+            background-size: cover;
+        }
+        .contact .content{
+            max-width: 800px;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .contact .content h2{
+            font-size: 36px;
+            font-weight: 500;
+            color: yellow;
+        }
+        .contact .content p{
+            font-weight: 300;
+            color: yellow;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .container .contactInfo{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container .contactInfo .box{
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+        .container .contactInfo .box .icon{
+            min-width: 60px;
+            height: 60px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+        .container .contactInfo .box .icon .text{
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 300;
+        }
+        .container .contactInfo .box .icon .text .h3{
+            font-weight: 500;
+            color: #00bcd4;
+        }
+        .contactForm{
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+        }
+        .contactForm h2{
+            font-size: 30px;
+            color: #fff;
+            font-weight: 500;
+        }
+        .contactForm .inputBox{
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .contactForm .inputBox input,
+        .contactForm .inputBox textarea
+        {
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+        .contactForm .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: #666;
+        }
+        .contactForm .inputBox input:focus ~ span,
+        .contactForm .inputBox input:valid ~ span,
+        .contactForm .inputBox textarea:focus ~ span,
+        .contactForm .inputBox textarea:valid ~ span{
+            color: #e91e63;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+        .contactForm .inputBox input[type="submit"]{
+            width: 100px;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+        @media (max-width: 991px){
+            .contact{
+                padding: 50px;
+            }
+            .container{
+                flex-direction: column;
+            }
+            .container .contactInfo{
+                margin-bottom: 40px;
+            }
+            .container .contactInfo,
+            .contactForm{
+                width: 100%;
+            }
+        }
+
+    </style>
+
+<body>
+
+    <header>
+        <img src="images/logoInterpure.png" alt="Interpure" class="logoSaya">
+        <a href="#" class="logo"><i class="fas-fa-utensils" style="margin-right: -300px;"></i>INTERPURE SDN.BHD.</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+
+            <a href="aboutUs.html">About</a>
+            <a class="active" href="OnlineSupport.html">Contact Us</a>
+        </nav>
+
+    </header>
+
+    <!--Contact Us-->
+
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>We're here to help! If you have any questions, comments, or feedback, please don't hesitate to contact us.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3 style="color: white">&nbsp;Phone</h3>
+                        <p style="color: white">&nbsp;+6098513953</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3 style="color: white">&nbsp;Email</h3>
+                        <p style="color: white">&nbsp;interpurecompany@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Phone Number</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</head>
+
+</html>

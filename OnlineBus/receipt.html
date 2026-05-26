@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpure SDN.BHD.</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        :root {
+            font-family: sans-serif;
+        }
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        body {
+            background-color: #FAF8E9;
+            background-position-x: 0;
+            background-position-Y: 0;
+            background-attachment: fixed;
+            padding-top: 50px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #A652FA;
+            padding: 1rem 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: var(--box-shadow);
+        }
+
+        .logoSaya {
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            margin-right: 10px;
+
+        }
+
+        .logoSaya:hover {
+            transform: translateY(-10px);
+        }
+
+        header .logo {
+            color: var(--black);
+            font-size: 1.5rem;
+            font-weight: bolder;
+            margin-right: 400px;
+        }
+
+        header .logo i {
+            color: var(--brown);
+        }
+
+        header .navbar a {
+            font-size: 1.2rem;
+            border-radius: .5rem;
+            padding: .5rem 1.5rem;
+            color: var(--black);
+        }
+
+        header .navbar a.active,
+        header .navbar a:hover {
+            color: #fff;
+            background: var(--brown);
+        }
+
+        header .icons i,
+        header .icons a {
+            cursor: pointer;
+            margin-left: .5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            width: 4.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--black);
+            border-radius: 80%;
+            background: #eee;
+        }
+
+        header .icons i:hover,
+        header .icons a:hover {
+            color: #fff;
+            background: var(--brown);
+            transform: rotate(360deg);
+        }
+
+        #menu-bars {
+            background-color: #A652FA;
+            color: var(--black);
+            padding: 8px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 12%;
+            cursor: pointer;
+            margin-left: 40px;
+
+        }
+
+        #menu-bars:hover {
+            color: white;
+        }
+
+        .icone {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content2 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .dropdown-content2 a:hover {
+            background-color: #ddd;
+        }
+
+        .icone:hover .dropdown-content2 {
+            display: block;
+        }
+
+        .icone:hover #menu-bars {
+            background-color: var(--brown);
+        }
+
+        .home {
+            min-height: 110vh;
+            display: flex;
+            align-items: center;
+            background-color: #FAF8E9;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #div1 {
+            background-color: #FFDFDF;
+            height: 20px;
+        }
+
+        #div2 {
+            height: 100px;
+            background-color: #FFDFDF
+        }
+
+        table {
+            margin-left: -295px;
+        }
+
+        table,
+        th,
+        td {
+            border: 0.5px solid black;
+        }
+
+        .information {
+            margin-top: 400px;
+            margin-left: -600px;
+        }
+
+        .notes {
+            margin-left: 295px;
+            margin-top: -400px;
+        }
+
+        .Print button {
+            margin-left: -400px;
+            margin-top: 500px;
+            width: 100px;
+            height: 50px;
+            cursor: pointer;
+            background-color: #FE6969;
+        }
+
+        button:hover {
+            background-color: rgb(223, 181, 181);
+            transform: translateY(-10px);
+        }
+
+
+    </style>
+
+<body>
+    <header>
+        <img src="images/logoInterpure.png" alt="Interpure" class="logoSaya">
+        <a href="#" class="logo"><i class="fas-fa-utensils"></i>INTERPURE</a>
+
+        <nav class="navbar">
+            <a class="active" href="homepage.html">Home</a>
+
+            <a href="aboutUs.html">About</a>
+            <a href="contactUs.html">Contact Us</a>
+        </nav>
+        <div class="icone">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <div class="dropdown-content2">
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+
+    </header>
+    <div id="div1"></div>
+    <div id="div2">
+        <div></div>
+        <br>
+        <br>
+        <h2> &nbsp ⚫Boarding Details</h2>
+    </div>
+
+    <section class="home" id="home">
+        <div class="homeContent" id="homeContent">
+            <div class="ticket" id="ticket">
+                <h4 style="margin-top: -160%; margin-left: 45%;">Company:&nbsp;Interpure</h4>
+                <br>
+                <img src="images/logoInterpure.png " style="width: 100px; height: 50px; margin-left: 45%;">
+                <br>
+                <br>
+                <label name="Depart" id="Depart" style="margin-left: 50px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Depart
+                    By:</label>
+                <br><br>
+                <label name="location" id="location"
+                    style="margin-left: 40px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIpoh To Melaka</label>
+                <br><br>
+                <label name="date" id="date"
+                    style="margin-left: 40px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDate:</label>
+                <br><br>
+            </div>
+
+        </div>
+        <label name="time" id="time" style="margin-left: 150px; margin-top: -150px;">Time:</label>
+
+        <table style="width: 600px; height:100px; text-align:center;">
+            <tr>
+                <th>Ticket No.</th>
+                <th>Seat No.</th>
+                <th>Price</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="information">
+
+            <h3>Customer Information</h3>
+            <br><br>
+            <label name="name" id="name">Name:</label>
+            <br><br>
+            <label name="ic" id="ic">IC/Passport:</label>
+            <br><br>
+            <label name="phoneNum" id="phoneNum">Mobile Number:</label>
+
+        </div>
+
+        <div class="notes">
+            <h4 style="color: red;">• You are required to screenshot or print this boarding information.</h4>
+            <br>
+            <h4 style="color: red;">• Please quote boarding code upon check in at the Bus Counter 30 minutes before
+                departure time.</h4>
+        </div>
+
+        <div class="Print">
+            <button name="print" id="print">Print</button>
+        </div>
+    </section>
+
+    <script>
+        //Print method
+        const printBtn = document.getElementById('print');
+
+        printBtn.addEventListener('click', function () {
+            print();
+        })
+
+    </script>
+
+</body>
+</head>
+
+</html>
